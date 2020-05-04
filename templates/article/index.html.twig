@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArticleController!{% endblock %}
+
+{% block body %}
+    {%  if articles is not empty %}
+    <ul>
+    {% for article in articles %}
+        <li>{{ article.title }} || {{ article.category.name }}</li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <p>Pas d'articles</p>
+
+    {% endif %}
+{% endblock %}
